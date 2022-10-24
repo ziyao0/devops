@@ -1,16 +1,16 @@
 plugins {
-    id 'org.springframework.boot' version '2.3.0.RELEASE'
+    id 'org.springframework.boot' version '2.1.18.RELEASE'
     id 'io.spring.dependency-management' version '1.0.14.RELEASE'
 }
 
 allprojects {
     apply plugin: 'maven-publish'
-    apply plugin: 'java'
+    apply plugin: 'java-library'
     apply plugin: 'org.springframework.boot'
     apply plugin: 'io.spring.dependency-management'
 
     group 'com.eason.devops'
-    version '1.0.0.SNAPSHOT'
+    version '1.0.0.RELEASE'
 
     configurations.all {
         transitive = true
@@ -53,9 +53,9 @@ allprojects {
     }
 
     dependencies {
-        implementation 'org.slf4j:slf4j-api:1.7.36'
-        implementation 'com.alibaba:fastjson:2.0.15'
-        implementation 'org.springframework.boot:spring-boot-autoconfigure'
+        api 'org.slf4j:slf4j-api:1.7.36'
+        api 'com.alibaba:fastjson:2.0.15'
+        api 'org.springframework.boot:spring-boot-autoconfigure'
         compileOnly 'org.projectlombok:lombok'
         annotationProcessor 'org.projectlombok:lombok'
     }

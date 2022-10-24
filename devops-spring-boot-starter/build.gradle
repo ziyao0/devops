@@ -1,7 +1,5 @@
 dependencies {
-    implementation project(":spring-boot-starter-devops-jenkins")
-    implementation project(":spring-boot-starter-devops-rancher")
-    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
-    implementation("commons-io:commons-io:2.11.0")
-    implementation("com.google.guava:guava:31.1-jre")
+    api project(":spring-boot-starter-devops-jenkins")
+    api project(":spring-boot-starter-devops-rancher")
+    api("commons-io:commons-io:2.11.0")
 }
