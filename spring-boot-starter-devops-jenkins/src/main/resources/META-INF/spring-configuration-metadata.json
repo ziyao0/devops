@@ -1,0 +1,22 @@
+{
+  "properties": [
+    {
+      "name": "com.eason.jenkins.base-uri",
+      "type": "com.eason.devops.jenkins.properties.JenkinsProperties",
+      "description": "Jenkins Access to the address",
+      "defaultValue": "http://localhost:8080/jenkins"
+    },
+    {
+      "name": "com.eason.jenkins.access-key",
+      "type": "com.eason.devops.jenkins.properties.JenkinsProperties",
+      "description": "username to use when connecting",
+      "defaultValue": "jenkins"
+    },
+    {
+      "name": "com.eason.jenkins.secret-key",
+      "type": "com.eason.devops.jenkins.properties.JenkinsProperties",
+      "description": "password (not recommended) or token (recommended)",
+      "defaultValue": "jenkins"
+    }
+  ]
+}

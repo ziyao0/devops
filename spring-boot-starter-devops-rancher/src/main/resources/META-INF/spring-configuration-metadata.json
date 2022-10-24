@@ -1,0 +1,22 @@
+{
+  "properties": [
+    {
+      "name": "com.eason.rancher.base-uri",
+      "type": "com.eason.devops.rancher.properties.RancherProperties",
+      "description": "Rancher Access to the address",
+      "defaultValue": "https://www.rancher.com"
+    },
+    {
+      "name": "com.eason.rancher.access-key",
+      "type": "com.eason.devops.rancher.properties.RancherProperties",
+      "description": "the access key",
+      "defaultValue": "rancher"
+    },
+    {
+      "name": "com.eason.rancher.secret-key",
+      "type": "com.eason.devops.rancher.properties.RancherProperties",
+      "description": "the secret key",
+      "defaultValue": "rancher"
+    }
+  ]
+}

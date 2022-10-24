@@ -1,0 +1,5 @@
+rootProject.name = 'devops-cloud'
+include 'spring-boot-starter-devops-jenkins'
+include 'spring-boot-starter-devops-rancher'
+include 'devops-spring-boot-starter'
+

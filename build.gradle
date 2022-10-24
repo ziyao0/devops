@@ -1,0 +1,66 @@
+plugins {
+    id 'org.springframework.boot' version '2.3.0.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.14.RELEASE'
+}
+
+allprojects {
+    apply plugin: 'maven-publish'
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    group 'com.eason.devops'
+    version '1.0.0.SNAPSHOT'
+
+    configurations.all {
+        transitive = true
+    }
+//    java {
+//        withJavadocJar() // 生成java-doc
+//        withSourcesJar() // 生成源码
+//    }
+
+    jar {
+        enabled = true //生成依赖jar包
+        archiveClassifier = '' //取消原来plain的后缀
+    }
+    configurations {
+        compileOnly {
+            extendsFrom annotationProcessor
+        }
+    }
+    //发布
+    publishing {
+        publications {
+            maven(MavenPublication) {
+                from components.java
+                versionMapping {
+                    usage('java-api') {
+                        fromResolutionOf('runtimeClasspath')
+                    }
+                    usage('java-runtime') {
+                        fromResolutionResult()
+                    }
+                }
+            }
+        }
+    }
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/spring/' }
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation 'org.slf4j:slf4j-api:1.7.36'
+        implementation 'com.alibaba:fastjson:2.0.15'
+        implementation 'org.springframework.boot:spring-boot-autoconfigure'
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
