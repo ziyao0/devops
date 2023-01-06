@@ -3,7 +3,6 @@ package com.eason.devops.jenkins;
 import com.eason.devops.jenkins.core.JenkinsBuilderHelper;
 import com.eason.devops.jenkins.core.JenkinsServer;
 import com.eason.devops.jenkins.properties.JenkinsProperties;
-import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,7 +17,6 @@ import java.net.URISyntaxException;
  */
 @Configuration
 @Import(JenkinsProperties.class)
-@AutoConfigureBefore(JenkinsProperties.class)
 public class JenkinsAutoConfiguration {
 
     @Bean

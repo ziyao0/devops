@@ -10,7 +10,7 @@ allprojects {
     apply plugin: 'io.spring.dependency-management'
 
     group 'com.eason.devops'
-    version '1.0.0.RELEASE'
+    version '1.0.1.RELEASE'
 
     configurations.all {
         transitive = true
@@ -44,10 +44,32 @@ allprojects {
                 }
             }
         }
+        repositories {
+            maven {
+                // 允许http访问
+                allowInsecureProtocol = true
+                // 私服仓库地址
+                url 'http://ip/repository/maven-releases/'
+                credentials {
+                    username 'user'
+                    password 'password'
+                }
+            }
+        }
     }
     repositories {
         maven { url 'https://maven.aliyun.com/repository/public/' }
         maven { url 'https://maven.aliyun.com/repository/spring/' }
+        maven {
+            // 允许http访问
+            allowInsecureProtocol = true
+            // 私服仓库地址
+            url 'http://ip/repository/maven-public/'
+            credentials {
+                username 'user'
+                password 'password'
+            }
+        }
         mavenLocal()
         mavenCentral()
     }
