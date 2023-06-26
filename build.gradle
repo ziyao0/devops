@@ -9,10 +9,10 @@ allprojects {
     apply plugin: 'org.springframework.boot'
     apply plugin: 'io.spring.dependency-management'
 
-    group 'com.eason.devops'
+    group 'com.ziyao.devops'
     version '1.0.0.RELEASE'
 
-    configurations.all {
+    configurations.configureEach {
         transitive = true
     }
 //    java {

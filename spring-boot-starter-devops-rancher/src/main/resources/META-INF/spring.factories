@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.eason.devops.rancher.RancherAutoConfiguration
+  com.ziyao.devops.rancher.RancherAutoConfiguration
