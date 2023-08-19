@@ -40,7 +40,7 @@
     <triggers/>
     <concurrentBuild>false</concurrentBuild>
     <rootModule>
-        <groupId>com.eason.devops</groupId>
+        <groupId>com.ziyao.devops</groupId>
         <artifactId>devops-cloud</artifactId>
     </rootModule>
     <goals>-Dmaven.test.skip=true -U clean package</goals>
