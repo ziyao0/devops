@@ -8,3 +8,4 @@
 *.ipr
 *.log
 .gradle
+**/build/**
